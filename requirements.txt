@@ -1,11 +1,7 @@
 streamlit
 opencv-python
 numpy
-pandas
-tensorflow
-scikit-learn
-urllib3
-matplotlib
-Pillow
+pillow
+torch
+torchvision
 requests
-jupyter
