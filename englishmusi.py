@@ -389,12 +389,12 @@ def show():
     st.session_state.current_song_miie = st.session_state.songs_eselected[7]
     st.session_state.current_song_riie = st.session_state.songs_eselected[8]
 
-  songe1 = st.session_state.current_song_lefte
+  songe1=st.session_state.current_song_lefte
   songe2=st.session_state.current_song_middlee
   songe3=st.session_state.current_song_righte
-  songe4= st.session_state.current_song_lee 
-  songe5= st.session_state.current_song_mie
-  songe6= st.session_state.current_song_rie
+  songe4=st.session_state.current_song_lee 
+  songe5=st.session_state.current_song_mie
+  songe6=st.session_state.current_song_rie
   songe7=st.session_state.current_song_leee
   songe8=st.session_state.current_song_miie
   songe9=st.session_state.current_song_riie
