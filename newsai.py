@@ -12,7 +12,7 @@ def show():
 
     .title {
         font-size: 36px;
-        color: #1f77b4;
+        color: white;                  # #1f77b4;
         font-weight: bold;
     }
 
@@ -26,7 +26,7 @@ def show():
 
     .news-title {
         font-size: 24px;
-        color: #333;
+        color:white;                  #333
         font-weight: 600;
     }
 
