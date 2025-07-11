@@ -9,10 +9,10 @@ def show():
     body {
         background-color: #f5f5f5;
     }
-
+                                        #31333F
     .title {
         font-size: 36px;
-        color: white;                  # #1f77b4;
+        color: white;                  # #1f77b4;   
         font-weight: bold;
     }
 
