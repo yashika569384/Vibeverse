@@ -71,25 +71,25 @@ def show():
     st.session_state.current_song_erii = st.session_state.songs_eselected[8]
     
     left, middle, right = st.columns(3)
-    songe1 = st.session_state.current_song_eleft
-    songe2=st.session_state.current_song_emiddle
-    songe3=st.session_state.current_song_eright
-    songe4= st.session_state.current_song_ele 
-    songe5= st.session_state.current_song_emi
-    songe6= st.session_state.current_song_eri
-    songe7=st.session_state.current_song_elee
-    songe8=st.session_state.current_song_emii
-    songe9=st.session_state.current_song_erii
+    songev1 = st.session_state.current_song_eleft
+    songev2=st.session_state.current_song_emiddle
+    songev3=st.session_state.current_song_eright
+    songev4= st.session_state.current_song_ele 
+    songev5= st.session_state.current_song_emi
+    songev6= st.session_state.current_song_eri
+    songev7=st.session_state.current_song_elee
+    songev8=st.session_state.current_song_emii
+    songev9=st.session_state.current_song_erii
 
-    s_le=songe1['Name']
-    s_me=songe2['Name']
-    s_re=songe3['Name']
-    s_lee=songe4['Name']
-    s_mie=songe5['Name']
-    s_rie=songe6['Name']
-    s_leee=songe7['Name']
-    s_miie=songe8['Name']
-    s_riie=songe9['Name']
+    s_le=songev1['Name']
+    s_me=songev2['Name']
+    s_re=songev3['Name']
+    s_lee=songev4['Name']
+    s_mie=songev5['Name']
+    s_rie=songev6['Name']
+    s_leee=songev7['Name']
+    s_miie=songev8['Name']
+    s_riie=songev9['Name']
 
   dfe['combined_features']=dfe['Genre']+dfe['Rating']
   from sklearn.feature_extraction.text import CountVectorizer
@@ -116,84 +116,84 @@ def show():
     
   import urllib
   import requests
-  songe1=st.session_state.current_song_eleft
-  songe2=st.session_state.current_song_emiddle
-  songe3=st.session_state.current_song_eright
-  songe4= st.session_state.current_song_ele 
-  songe5= st.session_state.current_song_emi
-  songe6= st.session_state.current_song_eri
-  songe7=st.session_state.current_song_elee
-  songe8=st.session_state.current_song_emii
-  songe9=st.session_state.current_song_erii
-  s_le=songe1['Name']
-  s_me=songe2['Name']
-  s_re=songe3['Name']
-  s_lee=songe4['Name']
-  s_mie=songe5['Name']
-  s_rie=songe6['Name']
-  s_leee=songe7['Name']
-  s_miie=songe8['Name']
-  s_riie=songe9['Name']
+  songev1=st.session_state.current_song_eleft
+  songev2=st.session_state.current_song_emiddle
+  songev3=st.session_state.current_song_eright
+  songev4= st.session_state.current_song_ele 
+  songev5= st.session_state.current_song_emi
+  songev6= st.session_state.current_song_eri
+  songev7=st.session_state.current_song_elee
+  songev8=st.session_state.current_song_emii
+  songev9=st.session_state.current_song_erii
+  s_le=songev1['Name']
+  s_me=songev2['Name']
+  s_re=songev3['Name']
+  s_lee=songev4['Name']
+  s_mie=songev5['Name']
+  s_rie=songev6['Name']
+  s_leee=songev7['Name']
+  s_miie=songev8['Name']
+  s_riie=songev9['Name']
   left, middle, right = st.columns(3)              
-  left.image(songe1['Poster'], width=150)
+  left.image(songev1['Poster'], width=150)
   with left:
      st.write(s_le)
      if st.button("Recommendations:",key='rec_lefte'):
       recommand(s_le)
-  middle.image(songe2['Poster'], width=150)
+  middle.image(songev2['Poster'], width=150)
   with middle:
      st.write(s_me)
      if st.button("Recommendations:",key='rec_middlee'):
       recommand(s_me)
-  right.image(songe3['Poster'], width=150)
+  right.image(songev3['Poster'], width=150)
   with right:
     st.write(s_re)
     if st.button("Recommendations:", key="play_erighte"):
       recommand(s_re)
   le, mi, ri = st.columns(3)
   with le:
-   songe4= st.session_state.current_song_ele
-   st.image(songe4['Poster'], width=150)
-   st.write(songe4['Name'])
+   songev4= st.session_state.current_song_ele
+   st.image(songev4['Poster'], width=150)
+   st.write(songev4['Name'])
    if st.button("Recommendation", key="play_ele"):
       
       recommand(s_lee)
   with mi:
-    songe5 = st.session_state.current_song_emi
-    st.image(songe5['Poster'], width=150)
-    st.write(songe5['Name'])
+    songev5 = st.session_state.current_song_emi
+    st.image(songev5['Poster'], width=150)
+    st.write(songev5['Name'])
     if st.button("Recommend", key="play_emie"):
       
       recommand(s_mie)
   with ri:
-    songe6 = st.session_state.current_song_eri
-    st.image(songe6['Poster'], width=150)
-    st.write(songe6['Name'])
+    songev6 = st.session_state.current_song_eri
+    st.image(songev6['Poster'], width=150)
+    st.write(songev6['Name'])
     if st.button("Recommendation:", key="play_erie"):
   
       recommand(s_rie)
   lee, mii, rii = st.columns(3)
   with lee:
-    songe7= st.session_state.current_song_elee
-    st.image(songe7['Poster'], width=150)
-    st.write(songe7['Name'])
+    songev7= st.session_state.current_song_elee
+    st.image(songev7['Poster'], width=150)
+    st.write(songev7['Name'])
     if st.button("Recommendation:", key="play_eleee"):
       
       recommand(s_leee)
 # Middle Column - Fixed Song 2
   with mii:
-    songe8 = st.session_state.current_song_emii
-    st.image(songe8['Poster'], width=150)
-    st.write(songe8['Name'])
+    songev8 = st.session_state.current_song_emii
+    st.image(songev8['Poster'], width=150)
+    st.write(songev8['Name'])
     if st.button("Recomendation:", key="play_emiie"):
       
       recommand(s_miie)
 
 # Right Column - "Now Playing" Section
   with rii:
-    songe9 = st.session_state.current_song_erii
-    st.image(songe9['Poster'], width=150)
-    st.write(songe9['Name'])
+    songev9 = st.session_state.current_song_erii
+    st.image(songev9['Poster'], width=150)
+    st.write(songev9['Name'])
     if st.button("Recommendation:", key="play_eriie"):
       
       recommand(s_riie)   
