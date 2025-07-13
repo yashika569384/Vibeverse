@@ -5,6 +5,6 @@ pillow
 torch
 torchvision
 requests
-pyttsx3
+
 scikit-learn
 
