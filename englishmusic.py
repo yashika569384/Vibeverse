@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 from PIL import Image
 import webbrowser
-import pyttsx3
+#import pyttsx3
 import requests
 import re
 import streamlit as st
@@ -94,7 +94,7 @@ def show():
               
             else:
                 st.write("Please provide a song name.")
-                talk_l("Please provide a song name.")
+               # talk_l("Please provide a song name.")
         #  p0lay_songs(s_l)
       def play(s):
           url = play_songs(s)
@@ -107,7 +107,7 @@ def show():
                  st.error("No video found for this song 😢")
       play(s)
       if st.button("▶ Play"):
-          talk_l(s)
+         # talk_l(s)
          
     #  s1=fil_df['song_name'].iloc[1]
       st.write(s)
@@ -142,7 +142,7 @@ def show():
               
              else:
                 st.write("Please provide a song name.")
-                talk_l("Please provide a song name.")
+               # talk_l("Please provide a song name.")
             def play(s1):
               url = play_songs(s1)
               if url:
@@ -177,7 +177,7 @@ def show():
               
               else:
                 st.write("Please provide a song name.")
-                talk_m("Please provide a song name.")
+               # talk_m("Please provide a song name.")
         #  play_songs(s_l)
           def play(s2):
               url = play_songs(s2)
@@ -193,7 +193,7 @@ def show():
           with lef:
             st.write(s1)
             if st.button("▶ Play",key="re_lef"):
-              talk_l(s1)
+             # talk_l(s1)
               play_songs(s1)
               play(s1)
               
@@ -201,7 +201,7 @@ def show():
           with mid:
             st.write(s2)
           if st.button("▶ Play",key="re_mid"):
-            talk_m(s2)
+           # talk_m(s2)
             play_songs(s2)
             play(s2)
           else:
@@ -268,7 +268,7 @@ def show():
               
              else:
                 st.write("Please provide a song name.")
-                talk_r("Please provide a song name.")
+               # talk_r("Please provide a song name.")
         #  play_songs(s_l)
          def play(s_re):
               url = play_songs(s_re)
@@ -392,7 +392,7 @@ def show():
             
             else:
               st.write("Please provide a song name.")
-              talk_m("Please provide a song name.")
+              #talk_m("Please provide a song name.")
       #  play_songs(s_l)
         def play(s_me):
             url = play_songs(s_me)
@@ -441,7 +441,7 @@ def show():
       st.write(s_le)
       if st.button("▶ Play", key="play_eleft"):
     # v=s_l
-        talk_l(s_le)
+        #talk_l(s_le)
   #  if st.button("Recommend", key="rec_left"):
         st.subheader("Made For You:")
         recommand(s_le)   #recommnded songs for left
@@ -451,7 +451,7 @@ def show():
       st.write(s_me)
       if st.button("▶ Play", key="play_emiddle"):
     # v=s_l
-        talk_m(s_me)     
+       # talk_m(s_me)     
         recommand(s_me)
 # if st.button("Recommend", key="rec_middle")  
     right.image(song3['poster'], width=150)
@@ -459,7 +459,7 @@ def show():
       st.write(s_re)
       if st.button("▶ Play", key="play_eright"):
     # v=s_l
-        talk_r(s_re)
+       # talk_r(s_re)
         recommand(s_re)
   
 # 2 layout columns 
@@ -485,7 +485,7 @@ def show():
             
             else:
               st.write("Please provide a song name.")
-              talk_le("Please provide a song name.")
+            #  talk_le("Please provide a song name.")
       #  play_songs(s_l)
         def play(s_lee):
             url = play_songs(s_lee)
@@ -523,7 +523,7 @@ def show():
             
             else:
               st.write("Please provide a song name.")
-              talk_mi("Please provide a song name.")
+             # talk_mi("Please provide a song name.")
       #  play_songs(s_l)
         def play(s_mie):
             url = play_songs(s_mie)
@@ -560,7 +560,7 @@ def show():
             
             else:
               st.write("Please provide a song name.")
-              talk_r("Please provide a song name.")
+             # talk_r("Please provide a song name.")
       #  play_songs(s_l)
         def play(s_rie):
             url = play_songs(s_rie)
@@ -580,7 +580,7 @@ def show():
    st.image(song4['poster'], width=150)
    st.write(song4['song_name'])
    if st.button("▶ Play", key="play_ele"):
-      talk_le(s_lee)
+    #  talk_le(s_lee)
       recommand(s_lee)
   
 # Middle Column - Fixed Song 2
@@ -589,7 +589,7 @@ def show():
     st.image(song5['poster'], width=150)
     st.write(song5['song_name'])
     if st.button("▶ Play", key="play_emi"):
-      talk_mi(s_mie)
+    #  talk_mi(s_mie)
       recommand(s_mie)
       
 
@@ -599,7 +599,7 @@ def show():
     st.image(song6['poster'], width=150)
     st.write(song6['song_name'])
     if st.button("▶ Play", key="play_eri"):
-      talk_ri(s_rie)
+     # talk_ri(s_rie)
       recommand(s_rie)
       
       # 3rd row
@@ -624,7 +624,7 @@ def show():
             
             else:
               st.write("Please provide a song name.")
-              talk_lee("Please provide a song name.")
+            #  talk_lee("Please provide a song name.")
       #  play_songs_l)
         def play(s_leee):
             url = play_songs(s_leee)
@@ -660,7 +660,7 @@ def show():
             
             else:
               st.write("Please provide a song name.")
-              talk_mii("Please provide a song name.")
+            #  talk_mii("Please provide a song name.")
       #  play_songs(s_l)
         def play(s_miie):
             url = play_songs(s_miie)
@@ -695,7 +695,7 @@ def show():
             
             else:
               st.write("Please provide a song name.")
-              talk_rii("Please provide a song name.")
+             # talk_rii("Please provide a song name.")
       #  play_songs(s_l)
         def play(s_riie):
             url = play_songs(s_riie)
@@ -713,7 +713,7 @@ def show():
     st.image(song7['poster'], width=150)
     st.write(song7['song_name'])
     if st.button("▶ Play", key="play_elees"):
-      talk_lee(s_leee)
+     # talk_lee(s_leee)
       recommand(s_leee)
 # Middle Column - Fixed Song 2
   with mii:
@@ -721,7 +721,7 @@ def show():
     st.image(song8['poster'], width=150)
     st.write(song8['song_name'])
     if st.button("▶ Play", key="play_emiis"):
-      talk_mii(s_miie)
+     # talk_mii(s_miie)
       recommand(s_miie)
 
 # Right Column - "Now Playing" Section
@@ -730,5 +730,6 @@ def show():
     st.image(song9['poster'], width=150)
     st.write(song9['song_name'])
     if st.button("▶ Play", key="play_eriis"):
-      talk_rii(s_riie)
+     # talk_rii(s_riie)
+
       recommand(s_riie)
