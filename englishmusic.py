@@ -106,7 +106,7 @@ def show():
           else:
                  st.error("No video found for this song 😢")
       play(s)
-      if st.button("▶ Play"):
+     # if st.button("▶ Play"):
          # talk_l(s)
          
     #  s1=fil_df['song_name'].iloc[1]
@@ -733,3 +733,4 @@ def show():
      # talk_rii(s_riie)
 
       recommand(s_riie)
+
