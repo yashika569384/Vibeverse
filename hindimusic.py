@@ -430,9 +430,9 @@ def show():
      recommand(s_rh)
   import requests
   def talk_le(s_leh):
-        engine = pyttsx3.init()
-        engine.say(s_leh)
-        engine.runAndWait()
+        #engine = pyttsx3.init()
+        #engine.say(s_leh)
+        #engine.runAndWait()
         def play_songs(s_leh):
             if (s_leh):
              st.write(f"Playing the song: {s_leh}")
@@ -693,4 +693,5 @@ def show():
       talk_rii(s_riih)
       recommand(s_riih)
 # show()
+
 
