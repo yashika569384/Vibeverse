@@ -411,7 +411,7 @@ def show():
   lefte.image(songe1['poster'], width=150)
   with lefte:
     st.write(s_le)
-   # if st.button("▶ Play", key="play_elefte"):
+    if st.button("▶ Play", key="play_elefte"):
      # talk_l(s_le)
       st.subheader("Made For You:")
       recommand(s_le)   
@@ -693,6 +693,7 @@ def show():
      # talk_rii(s_riie)
       recommand(s_riie)
 # show()
+
 
 
 
