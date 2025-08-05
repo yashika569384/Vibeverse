@@ -589,9 +589,9 @@ def show():
   s_leek=song7k['Name']
   s_miik=song8k['Name']
   s_riik=song9k['Name']
-          
+  with leftk:        
   leftk.image(song1k['Poster Path'], width=150)
-  with leftk:
+  
     st.write(s_lk)
     if st.button("▶ Play", key="play_eleft"):
   # v=s_l
@@ -889,3 +889,4 @@ def show():
       recommand(s_riik)
 
 # show()                                     
+
