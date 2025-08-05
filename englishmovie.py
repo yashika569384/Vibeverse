@@ -190,7 +190,7 @@ def show():
       with mid:
        st.write(s2)
        if st.button("▶ Play",key="re_mid"):
-        #talk_m(s2)
+        talk_m(s2)
         
     else:
      st.write("Movie does not exist")
@@ -715,5 +715,6 @@ def show():
 
 
 # show()
+
 
 
