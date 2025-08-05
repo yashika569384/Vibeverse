@@ -63,9 +63,9 @@ def show():
       s=fil_df['Title'].iloc[0]
       import requests
       def talk_l(s):                          
-         engine = pyttsx3.init()
-         engine.say(s)
-         engine.runAndWait()
+         #engine = pyttsx3.init()
+         #engine.say(s)
+         #engine.runAndWait()
          def play_songs(s):
              if (s):
               st.write(f"Playing the movie: {s}")
@@ -98,7 +98,7 @@ def show():
                  st.error("No video found for this movie 😢")
          play(s)
       if st.button("▶ Play"):
-         #talk_l(s)
+         talk_l(s)
         #  play_songs(s)
         #  play(s)
     #  s1=fil_df['song_name'].iloc[1]
@@ -112,9 +112,9 @@ def show():
       s2=fil_df['Title'].iloc[1]
       
       def talk_l(s1):
-         engine = pyttsx3.init()
-         engine.say(s1)
-         engine.runAndWait()
+         #engine = pyttsx3.init()
+         #engine.say(s1)
+         #engine.runAndWait()
          def play_mop(s1):
              if (s1):
               st.write(f"Playing the song: {s1}")
@@ -144,9 +144,9 @@ def show():
                  st.error("No video found for this movie 😢")
          play(s1)
       def talk_m(s2):
-         engine = pyttsx3.init()
-         engine.say(s2)
-         engine.runAndWait()
+         #engine = pyttsx3.init()
+         #engine.say(s2)
+         #engine.runAndWait()
          def play_mop(s2):
              if (s2):
               st.write(f"Playing the movie: {s2}")
@@ -715,3 +715,4 @@ def show():
 
 
 # show()
+
