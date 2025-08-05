@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 from PIL import Image
 import webbrowser
-import pyttsx3
+#import pyttsx3
 import requests
 import re
 import urllib
@@ -155,4 +155,5 @@ def show():
   elif rating=="Teens":
    teen.show()
   elif rating=="Mature":
+
    mature.show()
