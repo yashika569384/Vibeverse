@@ -106,7 +106,7 @@ def show():
               else:
                  st.error("No video found for this song 😢")
       
-        #if st.button("▶ Play"):
+        if st.button("▶ Play"):
         # talk_l(s)
          play_songs(s)
          play(s)
@@ -693,5 +693,6 @@ def show():
      # talk_rii(s_riie)
       recommand(s_riie)
 # show()
+
 
 
