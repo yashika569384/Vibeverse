@@ -672,7 +672,7 @@ def show():
     songe7= st.session_state.current_song_leee
     st.image(songe7['poster'], width=150)
     st.write(songe7['song_name'])
-    #if st.button("▶ Play", key="play_eleee"):
+    if st.button("▶ Play", key="play_eleee"):
     #  talk_lee(s_leee)
       recommand(s_leee)
 # Middle Column - Fixed Song 2
@@ -693,6 +693,7 @@ def show():
      # talk_rii(s_riie)
       recommand(s_riie)
 # show()
+
 
 
 
