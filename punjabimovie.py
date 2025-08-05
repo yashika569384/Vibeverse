@@ -66,6 +66,7 @@ def show():
              if (s):
               st.write(f"Playing the movie: {s}")
               import urllib
+              import requests
               query = urllib.parse.quote(s + " official trailer")
               url=f"https://www.youtube.com/results?search_query={s}"
             #   webbrowser.open(url)
@@ -711,3 +712,4 @@ def show():
 
 
 # show()
+
