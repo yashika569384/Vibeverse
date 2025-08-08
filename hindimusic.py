@@ -120,12 +120,12 @@ def show():
           
         s1=fil_df['song_name'].iloc[0]
         s2=fil_df['song_name'].iloc[1]
-       import urllib
-       import requests
+        import urllib
+        import requests
         def talk_l(s1):
-             engine = pyttsx3.init()
-             engine.say(s1)
-             engine.runAndWait()
+           engine = pyttsx3.init()
+           engine.say(s1)
+           engine.runAndWait()
         def play_songs(s1):
              if (s1):
               st.write(f"Playing the song: {s1}")
@@ -694,6 +694,7 @@ def show():
       talk_rii(s_riih)
       recommand(s_riih)
 # show()
+
 
 
 
