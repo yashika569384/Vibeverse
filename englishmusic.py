@@ -194,18 +194,18 @@ def show():
             st.write(s1)
             if st.button("▶ Play",key="re_lef"):
              # talk_l(s1)
-              play_songs(s1)
+              #play_songs(s1)
               play(s1)
               
-          mid.image(img2,width=200)
+          mid.image(img2e,width=200)
           with mid:
             st.write(s2)
-          if st.button("▶ Play",key="re_mid"):
+            if st.button("▶ Play",key="re_mid"):
            # talk_m(s2)
-            play_songs(s2)
-            play(s2)
-          else:
-            st.write("Song does not exist")
+              #play_songs(s2)
+              play(s2)
+    else:
+         st.write("Song does not exist")
   else:
       st.write("")
   dme=df1[df1['language']=='English']
@@ -733,6 +733,7 @@ def show():
      # talk_rii(s_riie)
 
       recommand(s_riie)
+
 
 
 
