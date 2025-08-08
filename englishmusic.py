@@ -112,7 +112,7 @@ def show():
     #  s1=fil_df['song_name'].iloc[1]
       st.write(s)
     #  st.write(s1)
-    else: 
+     else: 
           lef, mid = st.columns(2)
           img1e=fil_df['poster'].iloc[0]
           img2e=fil_df['poster'].iloc[1]
@@ -733,6 +733,7 @@ def show():
      # talk_rii(s_riie)
 
       recommand(s_riie)
+
 
 
 
