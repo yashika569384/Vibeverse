@@ -114,8 +114,8 @@ def show():
     #  st.write(s1)
      else: 
           lef, mid = st.columns(2)
-          img1e=fil_df['poster'].iloc[0]
-          img2e=fil_df['poster'].iloc[1]
+          img1=fil_df['poster'].iloc[0]
+          img2=fil_df['poster'].iloc[1]
           
           
           s1=fil_df['song_name'].iloc[0]
@@ -189,7 +189,7 @@ def show():
               else:
                  st.error("No video found for this song 😢")
           #play(s2)
-          lef.image(img1e,width=200)
+          lef.image(img1,width=200)
           with lef:
             st.write(s1)
             if st.button("▶ Play",key="re_lef"):
@@ -197,7 +197,7 @@ def show():
               #play_songs(s1)
               play(s1)
               
-          mid.image(img2e,width=200)
+          mid.image(img2,width=200)
           with mid:
             st.write(s2)
             if st.button("▶ Play",key="re_mid"):
@@ -733,6 +733,7 @@ def show():
      # talk_rii(s_riie)
 
       recommand(s_riie)
+
 
 
 
