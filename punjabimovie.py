@@ -107,14 +107,15 @@ def show():
       img2=fil_df['poster_path'].iloc[1]
       s1=fil_df['Title'].iloc[0]
       s2=fil_df['Title'].iloc[1]
-      
+      import urllib
+      import requests
       def talk_l(s1):
          engine = pyttsx3.init()
          engine.say(s1)
          engine.runAndWait()
       def play_mop(s1):
              if (s1):
-              st.write(f"Playing the song: {s1}")
+              st.write(f"Playing the movie trailer: {s1}")
               
               query = urllib.parse.quote(s1 + " official trailer")
               url=f"https://www.youtube.com/results?search_query={s1}"
@@ -145,7 +146,7 @@ def show():
          engine.runAndWait()
          def play_mop(s2):
              if (s2):
-              st.write(f"Playing the movie: {s2}")
+              st.write(f"Playing the movie trailer: {s2}")
               
               # talk_l(f"Playing the song {(song1[''])}")
         # url = f"https://www.google.com/search?q={podcast_name}"
@@ -712,4 +713,5 @@ def show():
 
 
 # show()
+
 
