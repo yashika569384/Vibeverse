@@ -102,7 +102,7 @@ def show():
           # play_songs(s)
           play(s)
     
-         st.write(s)
+          st.write(s)
     
        else: 
           lef, mid = st.columns(2)
@@ -889,6 +889,7 @@ def show():
       recommand(s_riik)
 
 # show()                                     
+
 
 
 
