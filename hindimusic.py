@@ -113,20 +113,20 @@ def show():
          st.write(s)
     #  st.write(s1)
        else: 
-          lef, mid = st.columns(2)
-          img1=fil_df['poster'].iloc[0]
-          img2=fil_df['poster'].iloc[1]
+        lef, mid = st.columns(2)
+        img1=fil_df['poster'].iloc[0]
+        img2=fil_df['poster'].iloc[1]
           
           
-          s1=fil_df['song_name'].iloc[0]
-          s2=fil_df['song_name'].iloc[1]
+        s1=fil_df['song_name'].iloc[0]
+        s2=fil_df['song_name'].iloc[1]
        import urllib
        import requests
-          def talk_l(s1):
+        def talk_l(s1):
              engine = pyttsx3.init()
              engine.say(s1)
              engine.runAndWait()
-          def play_songs(s1):
+        def play_songs(s1):
              if (s1):
               st.write(f"Playing the song: {s1}")
               
@@ -144,7 +144,7 @@ def show():
              else:
                 st.write("Please provide a song name.")
                 #talk_l("Please provide a song name.")
-          def play(s1):
+        def play(s1):
               url = play_songs(s1)
               if url:
                 st.markdown(
@@ -153,11 +153,11 @@ def show():
                  )
               else:
                  st.error("No video found for this song 😢")
-          def talk_m(s2):
+        def talk_m(s2):
          #engine = pyttsx3.init()
          #engine.say(s2)
          #engine.runAndWait()
-          def play_songs(s2):
+        def play_songs(s2):
              if (s2):
               st.write(f"Playing the song: {s2}")
               
@@ -179,7 +179,7 @@ def show():
                 st.write("Please provide a song name.")
                 talk_m("Please provide a song name.")
         #  play_songs(s_l)
-          def play(s2):
+        def play(s2):
               url = play_songs(s2)
               if url:
                 st.markdown(
@@ -189,8 +189,8 @@ def show():
               else:
                  st.error("No video found for this song 😢")
              play(s2)
-          lef.image(img1,width=200)
-          with lef:
+        lef.image(img1,width=200)
+        with lef:
             st.write(s1)
             if st.button("▶ Play",key="re_lefh"):
           #talk_l(s1)
@@ -207,7 +207,7 @@ def show():
       #else:
        #st.warning("No image available for the middle column.")
 
-          with mid:
+        with mid:
            st.write(s2)
            if st.button("▶ Play",key="re_midh"):
              try:
@@ -694,6 +694,7 @@ def show():
       talk_rii(s_riih)
       recommand(s_riih)
 # show()
+
 
 
 
