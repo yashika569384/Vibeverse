@@ -154,9 +154,9 @@ def show():
               else:
                  st.error("No video found for this song 😢")
         def talk_m(s2):
-          #engine = pyttsx3.init()
-          #engine.say(s2)
-          #engine.runAndWait()
+           engine = pyttsx3.init()
+           engine.say(s2)
+           engine.runAndWait()
         def play_songs(s2):
              if (s2):
               st.write(f"Playing the song: {s2}")
@@ -694,6 +694,7 @@ def show():
       talk_rii(s_riih)
       recommand(s_riih)
 # show()
+
 
 
 
