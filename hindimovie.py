@@ -183,7 +183,7 @@ def show():
                  )
               else:
                  st.error("No video found for this movie 😢")
-             play(s2)
+             #play(s2)
       lef.image(img1,width=200)
       with lef:
        st.write(s1)
@@ -697,5 +697,6 @@ def show():
       talk_rii(s_riihm)
       recommandh(s_riihm)
 # show()
+
 
 
