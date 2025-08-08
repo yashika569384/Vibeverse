@@ -143,7 +143,7 @@ def show():
       def play_songs(s1):
              if (s1):
               st.write(f"Playing the song: {s1}")
-              
+              import urlib
               query = urllib.parse.quote(s1 + " official audio")
               url=f"https://www.youtube.com/results?search_query={s1}"
               response = requests.get(url)
@@ -722,3 +722,4 @@ def show():
 
 
   
+
