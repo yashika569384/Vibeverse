@@ -179,7 +179,7 @@ def show():
                  )
               else:
                  st.error("No video found for this K-Drama 😢")
-             play(s2)
+             #play(s2)
           lef.image(img1,width=200)
           with lef:
               st.write(s1)
@@ -889,6 +889,7 @@ def show():
       recommand(s_riik)
 
 # show()                                     
+
 
 
 
