@@ -144,6 +144,8 @@ def show():
                  )
               else:
                  st.error("No video found for this K-Drama 😢")
+          import urllib
+          import requests
           def talk_m(s2):
             engine = pyttsx3.init()
             engine.say(s2)
@@ -889,6 +891,7 @@ def show():
       recommand(s_riik)
 
 # show()                                     
+
 
 
 
