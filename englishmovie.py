@@ -116,7 +116,7 @@ def show():
          #engine = pyttsx3.init()
          #engine.say(s1)
          #engine.runAndWait()
-         def play_mop(s1):
+      def play_mop(s1):
              if (s1):
               st.write(f"Playing the song: {s1}")
               
@@ -134,7 +134,7 @@ def show():
              else:
                 st.write("Please provide a movie name.")
                 #talk_l("Please provide a movie name.")
-         def play(s1):
+      def play(s1):
               url = play_mop(s1)
               if url:
                 st.markdown(
@@ -184,14 +184,14 @@ def show():
       with lef:
        st.write(s1)
        if st.button("▶ Play",key="re_lef"):
-        talk_l(s1)
+        play(s1)
         
       
       mid.image(img2,width=200)
       with mid:
        st.write(s2)
        if st.button("▶ Play",key="re_mid"):
-        talk_m(s2)
+        play(s2)
         
     else:
      st.write("Movie does not exist")
@@ -716,6 +716,7 @@ def show():
 
 
 # show()
+
 
 
 
