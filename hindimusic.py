@@ -206,7 +206,7 @@ def show():
         #st.warning(f"Couldn't load image for middle column: {e}")
       #else:
        #st.warning("No image available for the middle column.")
-
+        mid.image(img2,width=200)
         with mid:
            st.write(s2)
            if st.button("▶ Play",key="re_midh"):
@@ -694,6 +694,7 @@ def show():
       talk_rii(s_riih)
       recommand(s_riih)
 # show()
+
 
 
 
