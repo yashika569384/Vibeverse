@@ -195,8 +195,8 @@ def show():
                       #talk_m(s2)
                       #play_songs(s2)
                       play(s2)
-                    else:
-      st.write("K-Drama does not exist")
+      else:
+        st.write("K-Drama does not exist")
   else:
     st.write("")
   import random
@@ -889,6 +889,7 @@ def show():
       recommand(s_riik)
 
 # show()                                     
+
 
 
 
