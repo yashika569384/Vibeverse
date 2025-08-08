@@ -110,7 +110,8 @@ def show():
       img2=fil_df['poster_path'].iloc[1]
       s1=fil_df['Title'].iloc[0]
       s2=fil_df['Title'].iloc[1]
-      
+      import urllib
+      import requests 
       def talk_l(s1):
          #engine = pyttsx3.init()
          #engine.say(s1)
@@ -144,10 +145,10 @@ def show():
                  st.error("No video found for this movie 😢")
          play(s1)
       def talk_m(s2):
-         #engine = pyttsx3.init()
-         #engine.say(s2)
-         #engine.runAndWait()
-         def play_mop(s2):
+         engine = pyttsx3.init()
+         engine.say(s2)
+         engine.runAndWait()
+      def play_mop(s2):
              if (s2):
               st.write(f"Playing the movie: {s2}")
               
@@ -169,7 +170,7 @@ def show():
                 st.write("Please provide a movie name.")
                 #talk_m("Please provide a movie name.")
         #  play_songs(s_l)
-             def play(s2):
+      def play(s2):
               url = play_mop(s2)
               if url:
                 st.markdown(
@@ -715,6 +716,7 @@ def show():
 
 
 # show()
+
 
 
 
