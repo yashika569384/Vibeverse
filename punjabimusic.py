@@ -125,7 +125,7 @@ def show():
          play_songs(s)
          play(s)
     #  s1=fil_df['song_name'].iloc[1]
-      st.write(s)
+      #st.write(s)
     #  st.write(s1)
      else: 
       lef, mid = st.columns(2)
@@ -722,5 +722,6 @@ def show():
 
 
   
+
 
 
