@@ -208,7 +208,7 @@ def show():
        st.write(s1)
        if st.button("▶ Play",key="re_lefp"):
         #talk_l(s1)
-        play_songs(s1)
+        #play_songs(s1)
         play(s1)
       
       mid.image(img2,width=200)
@@ -722,6 +722,7 @@ def show():
 
 
   
+
 
 
 
