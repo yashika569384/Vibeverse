@@ -125,7 +125,7 @@ def show():
             engine = pyttsx3.init()
             engine.say(s1)
             engine.runAndWait()
-            def play_songs(s1):
+          def play_songs(s1):
              if (s1):
               st.write(f"Playing the song: {s1}")
               
@@ -143,7 +143,7 @@ def show():
              else:
                 st.write("Please provide a song name.")
                # talk_l("Please provide a song name.")
-            def play(s1):
+          def play(s1):
               url = play_songs(s1)
               if url:
                 st.markdown(
@@ -188,7 +188,7 @@ def show():
                  )
               else:
                  st.error("No video found for this song 😢")
-          play(s2)
+          #play(s2)
           lef.image(img1e,width=200)
           with lef:
             st.write(s1)
@@ -733,6 +733,7 @@ def show():
      # talk_rii(s_riie)
 
       recommand(s_riie)
+
 
 
 
