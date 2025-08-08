@@ -102,7 +102,7 @@ def show():
       
       if st.button("▶ Play"):
          #talk_l(s)
-         play_songs(s)
+         #play_songs(s)
          play(s)
     #  s1=fil_df['song_name'].iloc[1]
       st.write(s)
@@ -152,7 +152,7 @@ def show():
          engine = pyttsx3.init()
          engine.say(s2)
          engine.runAndWait()
-         def play_songs(s2):
+      def play_songs(s2):
              if (s2):
               st.write(f"Playing the movie: {s2}")
               
@@ -174,7 +174,7 @@ def show():
                 st.write("Please provide a movie name.")
                 #talk_m("Please provide a movie name.")
         #  play_songs(s_l)
-             def play(s2):
+      def play(s2):
               url = play_songs(s2)
               if url:
                 st.markdown(
@@ -189,7 +189,7 @@ def show():
        st.write(s1)
        if st.button("▶ Play",key="re_lef"):
         #talk_l(s1)
-        play_songs(s1)
+        #play_songs(s1)
         play(s1)
       
       mid.image(img2,width=200)
@@ -197,7 +197,7 @@ def show():
        st.write(s2)
        if st.button("▶ Play",key="re_mid"):
         #talk_m(s2)
-        play_songs(s2)
+        #play_songs(s2)
         play(s2)
     else:
      st.write("Movie does not exist")
@@ -697,4 +697,5 @@ def show():
       talk_rii(s_riihm)
       recommandh(s_riihm)
 # show()
+
 
