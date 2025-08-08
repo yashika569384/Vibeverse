@@ -110,7 +110,7 @@ def show():
                 st.write("Please provide a song name.")
                 #talk_l("Please provide a song name.")
         #  play_songs(s_l)
-         def play(s):
+      def play(s):
               url = play_songs(s)
               if url:
                 st.markdown(
@@ -122,8 +122,8 @@ def show():
       
       if st.button("▶ Play"):
          #talk_l(s)
-         play_songs(s)
-         #play(s)
+         #play_songs(s)
+         play(s)
     #  s1=fil_df['song_name'].iloc[1]
       #st.write(s)
     #  st.write(s1)
@@ -722,6 +722,7 @@ def show():
 
 
   
+
 
 
 
