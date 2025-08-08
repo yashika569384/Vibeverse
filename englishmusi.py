@@ -180,7 +180,7 @@ def show():
                 st.write("Please provide a song name.")
                # talk_m("Please provide a song name.")
         #  play_songs(s_l)
-             def play(s2):
+          def play(s2):
               url = play_songs(s2)
               if url:
                 st.markdown(
@@ -195,7 +195,7 @@ def show():
               st.write(s1)
               if st.button("▶ Play",key="re_lefh"):
          # talk_l(s1)
-                play_songs(s1)
+                #play_songs(s1)
                 play(s1)
       
       #  mid.image(img2,width=200)
@@ -695,6 +695,7 @@ def show():
       talk_rii(s_riie)
       recommand(s_riie)
 # show()
+
 
 
 
