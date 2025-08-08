@@ -172,7 +172,7 @@ def show():
          engine = pyttsx3.init()
          engine.say(s2)
          engine.runAndWait()
-         def play_songs(s2):
+      def play_songs(s2):
              if (s2):
               st.write(f"Playing the song: {s2}")
               
@@ -194,7 +194,7 @@ def show():
                 st.write("Please provide a song name.")
                 #talk_m("Please provide a song name.")
         #  play_songs(s_l)
-             def play(s2):
+      def play(s2):
               url = play_songs(s2)
               if url:
                 st.markdown(
@@ -217,7 +217,7 @@ def show():
        st.write(s2)
        if st.button("▶ Play",key="re_midp"):
         #talk_m(s2)
-        play_songs(s2)
+        #play_songs(s2)
         play(s2)
     else:
      st.write("Song does not exist")
@@ -723,6 +723,7 @@ def show():
 
 
   
+
 
 
 
