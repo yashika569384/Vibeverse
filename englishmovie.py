@@ -145,9 +145,9 @@ def show():
                  st.error("No video found for this movie 😢")
          play(s1)
       def talk_m(s2):
-         engine = pyttsx3.init()
-         engine.say(s2)
-         engine.runAndWait()
+         #engine = pyttsx3.init()
+         #engine.say(s2)
+         #engine.runAndWait()
       def play_mop(s2):
              if (s2):
               st.write(f"Playing the movie: {s2}")
@@ -716,6 +716,7 @@ def show():
 
 
 # show()
+
 
 
 
