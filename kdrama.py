@@ -64,7 +64,7 @@ def show():
          engine = pyttsx3.init()
          engine.say(s)
          engine.runAndWait()
-         def play_songs(s):
+        def play_songs(s):
              if (s):
               st.write(f"Playing the kdrama: {s}")
               
@@ -87,7 +87,7 @@ def show():
                 st.write("Please provide a K-Drama name.")
                 talk_l("Please provide a K-Drama name.")
         #  play_songs(s_l)
-         def play(s):
+        def play(s):
               url = play_songs(s)
               if url:
                 st.markdown(
@@ -97,14 +97,14 @@ def show():
               else:
                  st.error("No video found for this K-Drama 😢")
          play(s)
-      if st.button("▶ Play"):
-          talk_l(s)
+        if st.button("▶ Play"):
+          #talk_l(s)
           # play_songs(s)
-          # play(s)
+          play(s)
     
-      st.write(s)
+         st.write(s)
     
-     else: 
+       else: 
           lef, mid = st.columns(2)
           img1=fil_df['Poster Path'].iloc[0]
           img2=fil_df['Poster Path'].iloc[1]
@@ -114,10 +114,10 @@ def show():
           s2=fil_df['Poster Path'].iloc[1]
           
           def talk_l(s1):
-            #engine = pyttsx3.init()
-            #engine.say(s1)
-            #engine.runAndWait()
-            def play_songs(s1):
+            engine = pyttsx3.init()
+            engine.say(s1)
+            engine.runAndWait()
+          def play_songs(s1):
              if (s1):
               st.write(f"Playing the kdrama: {s1}")
               
@@ -134,8 +134,8 @@ def show():
               
              else:
                 st.write("Please provide a K-Drama name.")
-                talk_l("Please provide a K-Drama name.")
-            def play(s1):
+                #talk_l("Please provide a K-Drama name.")
+          def play(s1):
               url = play_songs(s1)
               if url:
                 st.markdown(
@@ -145,10 +145,10 @@ def show():
               else:
                  st.error("No video found for this K-Drama 😢")
           def talk_m(s2):
-            #engine = pyttsx3.init()
-            #engine.say(s2)
-            #engine.runAndWait()
-            def play_songs(s2):
+            engine = pyttsx3.init()
+            engine.say(s2)
+            engine.runAndWait()
+          def play_songs(s2):
              if (s2):
               st.write(f"Playing the kdrama: {s2}")
               
@@ -170,7 +170,7 @@ def show():
                 st.write("Please provide a K-Drama name.")
                 #talk_m("Please provide a K-Drama name.")
         #  play_songs(s_l)
-             def play(s2):
+          def play(s2):
               url = play_songs(s2)
               if url:
                 st.markdown(
@@ -180,23 +180,23 @@ def show():
               else:
                  st.error("No video found for this K-Drama 😢")
              play(s2)
-             lef.image(img1,width=200)
-             with lef:
+          lef.image(img1,width=200)
+          with lef:
               st.write(s1)
               if st.button("▶ Play",key="re_lef"):
                 #talk_l(s1)
-                play_songs(s1)
+                #play_songs(s1)
                 play(s1)
           
-             mid.image(img2,width=200)
-             with mid:
+          mid.image(img2,width=200)
+          with mid:
                     st.write(s2)
                     if st.button("▶ Play",key="re_mid"):
                       #talk_m(s2)
-                      play_songs(s2)
+                      #play_songs(s2)
                       play(s2)
                     else:
-                      st.write("K-Drama does not exist")
+      st.write("K-Drama does not exist")
   else:
     st.write("")
   import random
@@ -889,5 +889,6 @@ def show():
       recommand(s_riik)
 
 # show()                                     
+
 
 
