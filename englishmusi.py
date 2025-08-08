@@ -198,13 +198,13 @@ def show():
       
       #  mid.image(img2,width=200)
       # Defensive check before displaying the image
-      if img2 is not None:
-       try:
-        mid.image(img2, width=200)
-       except Exception as e:
-        st.warning(f"Couldn't load image for middle column: {e}")
-      else:
-       st.warning("No image available for the middle column.")
+      #if img2 is not None:
+       #try:
+        #mid.image(img2, width=200)
+       #except Exception as e:
+        #st.warning(f"Couldn't load image for middle column: {e}")
+      #else:
+       #st.warning("No image available for the middle column.")
 
        with mid:
          st.write(s2)
@@ -693,6 +693,7 @@ def show():
       talk_rii(s_riie)
       recommand(s_riie)
 # show()
+
 
 
 
