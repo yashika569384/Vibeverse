@@ -110,8 +110,8 @@ def show():
           img2=fil_df['Poster Path'].iloc[1]
           
           
-          s1=fil_df['Poster Path'].iloc[0]
-          s2=fil_df['Poster Path'].iloc[1]
+          s1=fil_df['Name'].iloc[0]
+          s2=fil_df['Name'].iloc[1]
           
           def talk_l(s1):
             engine = pyttsx3.init()
@@ -889,6 +889,7 @@ def show():
       recommand(s_riik)
 
 # show()                                     
+
 
 
 
