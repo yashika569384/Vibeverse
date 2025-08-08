@@ -218,7 +218,7 @@ def show():
        if st.button("▶ Play",key="re_midp"):
         #talk_m(s2)
         #play_songs(s2)
-        play(s2)
+         play(s2)
     else:
      st.write("Song does not exist")
   else:
@@ -723,6 +723,7 @@ def show():
 
 
   
+
 
 
 
