@@ -188,13 +188,13 @@ def show():
               else:
                  st.error("No video found for this song 😢")
              play(s2)
-       lef.image(img1,width=200)
-       with lef:
-         st.write(s1)
-         if st.button("▶ Play",key="re_lefh"):
+          lef.image(img1,width=200)
+          with lef:
+              st.write(s1)
+              if st.button("▶ Play",key="re_lefh"):
          # talk_l(s1)
-          play_songs(s1)
-          play(s1)
+                play_songs(s1)
+                play(s1)
       
       #  mid.image(img2,width=200)
       # Defensive check before displaying the image
@@ -693,6 +693,7 @@ def show():
       talk_rii(s_riie)
       recommand(s_riie)
 # show()
+
 
 
 
