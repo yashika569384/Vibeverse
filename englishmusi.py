@@ -189,7 +189,7 @@ def show():
                  )
               else:
                  st.error("No video found for this song 😢")
-             play(s2)
+             #play(s2)
           lef.image(img1,width=200)
           with lef:
               st.write(s1)
@@ -213,7 +213,7 @@ def show():
             if st.button("▶ Play",key="re_midh"):
               try:
            # talk_m(s2)
-                play_songs(s2)
+                #play_songs(s2)
                 play(s2)
               except IndexError:
                 st.error("Could not play the content for the left column. Data might be missing.")
@@ -695,6 +695,7 @@ def show():
       talk_rii(s_riie)
       recommand(s_riie)
 # show()
+
 
 
 
