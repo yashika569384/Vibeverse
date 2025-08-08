@@ -172,7 +172,7 @@ def show():
          engine = pyttsx3.init()
          engine.say(s2)
          engine.runAndWait()
-      def play_songs(s2):
+         def play_songs(s2):
              if (s2):
               st.write(f"Playing the song: {s2}")
               
@@ -194,7 +194,7 @@ def show():
                 st.write("Please provide a song name.")
                 #talk_m("Please provide a song name.")
         #  play_songs(s_l)
-      def play(s2):
+           def play(s2):
               url = play_songs(s2)
               if url:
                 st.markdown(
@@ -208,9 +208,9 @@ def show():
       with lef:
        st.write(s1)
        if st.button("▶ Play",key="re_lefp"):
-        #talk_l(s1)
+        talk_l(s1)
         #play_songs(s1)
-        play(s1)
+        #play(s1)
       
       mid.image(img2,width=200)
       with mid:
@@ -723,6 +723,7 @@ def show():
 
 
   
+
 
 
 
