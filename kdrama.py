@@ -96,7 +96,7 @@ def show():
                  )
               else:
                  st.error("No video found for this K-Drama 😢")
-         play(s)
+         #play(s)
         if st.button("▶ Play"):
           #talk_l(s)
           # play_songs(s)
@@ -889,6 +889,7 @@ def show():
       recommand(s_riik)
 
 # show()                                     
+
 
 
 
