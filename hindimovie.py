@@ -62,7 +62,7 @@ def show():
       # with left:
       st.image(img,width=200)
     #  st.image(img1,width=200)
-      s=fil_df['poster_path'].iloc[0]
+      s=fil_df['Title'].iloc[0]
       import requests
       import urllib
       def talk_l(s):
@@ -697,6 +697,7 @@ def show():
       talk_rii(s_riihm)
       recommandh(s_riihm)
 # show()
+
 
 
 
