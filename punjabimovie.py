@@ -43,158 +43,158 @@ def show():
     }
     </style>
 """, unsafe_allow_html=True)
-  search_query = st.text_input("Search for a movie")
-  if search_query:
-   if len(search_query) >= 3:
-    fil_df=df7[df7.apply(lambda row: search_query.lower() in row.to_string().lower(),axis=1)]
-    if not fil_df.empty:
-     st.subheader("Search Results:")
-     if len(fil_df)==1:
-    #  st.write(fil_df)
-      img=fil_df['poster_path'].iloc[0]    
-    #  img1=fil_df['poster'].iloc[1]
-# st.columns
-      # with left:
-      st.image(img,width=200)
-    #  st.image(img1,width=200)
-      s=fil_df['Title'].iloc[0]
-      def talk_l(s):                          
-         engine = pyttsx3.init()
-         engine.say(s)
-         engine.runAndWait()
-      def play_songs(s):
-             if (s):
-              st.write(f"Playing the movie: {s}")
-              import urllib
-              import requests
-              query = urllib.parse.quote(s + " official trailer")
-              url=f"https://www.youtube.com/results?search_query={s}"
-            #   webbrowser.open(url)
-            #   print(f"Playing song: {s_l}")
-              response = requests.get(url)
-              video_ids = re.findall(r"watch\?v=(\S{11})", response.text)
-              if video_ids:
-                 return f"https://www.youtube.com/embed/{video_ids[0]}?autoplay=1"
-              # else:
-              #    return f"https://www.youtube.com/embed/{video_ids[0]}?autoplay=1"
-              else:
-                 return None
+#   search_query = st.text_input("Search for a movie")
+#   if search_query:
+#    if len(search_query) >= 3:
+#     fil_df=df7[df7.apply(lambda row: search_query.lower() in row.to_string().lower(),axis=1)]
+#     if not fil_df.empty:
+#      st.subheader("Search Results:")
+#      if len(fil_df)==1:
+#     #  st.write(fil_df)
+#       img=fil_df['poster_path'].iloc[0]    
+#     #  img1=fil_df['poster'].iloc[1]
+# # st.columns
+#       # with left:
+#       st.image(img,width=200)
+#     #  st.image(img1,width=200)
+#       s=fil_df['Title'].iloc[0]
+#       def talk_l(s):                          
+#          engine = pyttsx3.init()
+#          engine.say(s)
+#          engine.runAndWait()
+#       def play_songs(s):
+#              if (s):
+#               st.write(f"Playing the movie: {s}")
+#               import urllib
+#               import requests
+#               query = urllib.parse.quote(s + " official trailer")
+#               url=f"https://www.youtube.com/results?search_query={s}"
+#             #   webbrowser.open(url)
+#             #   print(f"Playing song: {s_l}")
+#               response = requests.get(url)
+#               video_ids = re.findall(r"watch\?v=(\S{11})", response.text)
+#               if video_ids:
+#                  return f"https://www.youtube.com/embed/{video_ids[0]}?autoplay=1"
+#               # else:
+#               #    return f"https://www.youtube.com/embed/{video_ids[0]}?autoplay=1"
+#               else:
+#                  return None
               
-             else:
-                st.write("Please provide a movie name.")
-                #talk_l("Please provide a movie name.")
-        #  play_songs(s_l)
-      def play(s):
-              url = play_songs(s)
-              if url:
-                st.markdown(
-                   f'<iframe width="400%" height="700px" src="{url}" frameborder="0" allow="autoplay" allowfullscreen></iframe>',
-            unsafe_allow_html=True,
-                 )
-              else:
-                 st.error("No video found for this movie 😢")
+#              else:
+#                 st.write("Please provide a movie name.")
+#                 #talk_l("Please provide a movie name.")
+#         #  play_songs(s_l)
+#       def play(s):
+#               url = play_songs(s)
+#               if url:
+#                 st.markdown(
+#                    f'<iframe width="400%" height="700px" src="{url}" frameborder="0" allow="autoplay" allowfullscreen></iframe>',
+#             unsafe_allow_html=True,
+#                  )
+#               else:
+#                  st.error("No video found for this movie 😢")
       
-      if st.button("▶ Play"):
-         #talk_l(s)
-         #play_songs(s)
-         play(s)
-    #  s1=fil_df['song_name'].iloc[1]
-      st.write(s)
-    #  st.write(s1)
-     else: 
-      lef, mid = st.columns(2)
-      img1=fil_df['poster_path'].iloc[0]
-      img2=fil_df['poster_path'].iloc[1]
-      s1=fil_df['Title'].iloc[0]
-      s2=fil_df['Title'].iloc[1]
-      import urllib
-      import requests
-      def talk_l(s1):
-         engine = pyttsx3.init()
-         engine.say(s1)
-         engine.runAndWait()
-      def play_mop(s1):
-             if (s1):
-              st.write(f"Playing the movie trailer: {s1}")
+#       if st.button("▶ Play"):
+#          #talk_l(s)
+#          #play_songs(s)
+#          play(s)
+#     #  s1=fil_df['song_name'].iloc[1]
+#       st.write(s)
+#     #  st.write(s1)
+#      else: 
+#       lef, mid = st.columns(2)
+#       img1=fil_df['poster_path'].iloc[0]
+#       img2=fil_df['poster_path'].iloc[1]
+#       s1=fil_df['Title'].iloc[0]
+#       s2=fil_df['Title'].iloc[1]
+#       import urllib
+#       import requests
+#       def talk_l(s1):
+#          engine = pyttsx3.init()
+#          engine.say(s1)
+#          engine.runAndWait()
+#       def play_mop(s1):
+#              if (s1):
+#               st.write(f"Playing the movie trailer: {s1}")
               
-              query = urllib.parse.quote(s1 + " official trailer")
-              url=f"https://www.youtube.com/results?search_query={s1}"
-              response = requests.get(url)
-              video_ids = re.findall(r"watch\?v=(\S{11})", response.text)
-              if video_ids:
-                 return f"https://www.youtube.com/embed/{video_ids[0]}?autoplay=1"
-              # else:
-              #    return f"https://www.youtube.com/embed/{video_ids[0]}?autoplay=1"
-              else:
-                 return None
+#               query = urllib.parse.quote(s1 + " official trailer")
+#               url=f"https://www.youtube.com/results?search_query={s1}"
+#               response = requests.get(url)
+#               video_ids = re.findall(r"watch\?v=(\S{11})", response.text)
+#               if video_ids:
+#                  return f"https://www.youtube.com/embed/{video_ids[0]}?autoplay=1"
+#               # else:
+#               #    return f"https://www.youtube.com/embed/{video_ids[0]}?autoplay=1"
+#               else:
+#                  return None
               
-             else:
-                st.write("Please provide a movie name.")
-                #talk_l("Please provide a movie name.")
-      def play(s1):
-              url = play_mop(s1)
-              if url:
-                st.markdown(
-                   f'<iframe width="400%" height="700px" src="{url}" frameborder="0" allow="autoplay" allowfullscreen></iframe>',
-            unsafe_allow_html=True,
-                 )
-              else:
-                 st.error("No video found for this movie 😢")
-      def talk_m(s2):
-         engine = pyttsx3.init()
-         engine.say(s2)
-         engine.runAndWait()
-      def play_mop(s2):
-             if (s2):
-              st.write(f"Playing the movie trailer: {s2}")
+#              else:
+#                 st.write("Please provide a movie name.")
+#                 #talk_l("Please provide a movie name.")
+#       def play(s1):
+#               url = play_mop(s1)
+#               if url:
+#                 st.markdown(
+#                    f'<iframe width="400%" height="700px" src="{url}" frameborder="0" allow="autoplay" allowfullscreen></iframe>',
+#             unsafe_allow_html=True,
+#                  )
+#               else:
+#                  st.error("No video found for this movie 😢")
+#       def talk_m(s2):
+#          engine = pyttsx3.init()
+#          engine.say(s2)
+#          engine.runAndWait()
+#       def play_mop(s2):
+#              if (s2):
+#               st.write(f"Playing the movie trailer: {s2}")
               
-              # talk_l(f"Playing the song {(song1[''])}")
-        # url = f"https://www.google.com/search?q={podcast_name}"
-              query = urllib.parse.quote(s2 + " official trailer")
-              url=f"https://www.youtube.com/results?search_query={s2}"
-            #   webbrowser.open(url)
-            #   print(f"Playing song: {s_l}")
-              response = requests.get(url)
-              video_ids = re.findall(r"watch\?v=(\S{11})", response.text)
+#               # talk_l(f"Playing the song {(song1[''])}")
+#         # url = f"https://www.google.com/search?q={podcast_name}"
+#               query = urllib.parse.quote(s2 + " official trailer")
+#               url=f"https://www.youtube.com/results?search_query={s2}"
+#             #   webbrowser.open(url)
+#             #   print(f"Playing song: {s_l}")
+#               response = requests.get(url)
+#               video_ids = re.findall(r"watch\?v=(\S{11})", response.text)
     
-              if video_ids:
-               return f"https://www.youtube.com/embed/{video_ids[0]}?autoplay=1"
-              else:
-               return None
+#               if video_ids:
+#                return f"https://www.youtube.com/embed/{video_ids[0]}?autoplay=1"
+#               else:
+#                return None
               
-             else:
-                st.write("Please provide a movie name.")
-                #talk_m("Please provide a movie name.")
-        #  play_songs(s_l)
-      def play(s2):
-              url = play_mop(s2)
-              if url:
-                st.markdown(
-                   f'<iframe width="300%" height="700px" src="{url}" frameborder="0" allow="autoplay" allowfullscreen></iframe>',
-            unsafe_allow_html=True,
-                 )
-              else:
-                 st.error("No video found for this movie 😢")
-             #play(s2)
-      lef.image(img1,width=200)
-      with lef:
-       st.write(s1)
-       if st.button("▶ Play",key="re_lef"):
-        #talk_l(s1)
-        #play_mop(s1)
-        play(s1)
+#              else:
+#                 st.write("Please provide a movie name.")
+#                 #talk_m("Please provide a movie name.")
+#         #  play_songs(s_l)
+#       def play(s2):
+#               url = play_mop(s2)
+#               if url:
+#                 st.markdown(
+#                    f'<iframe width="300%" height="700px" src="{url}" frameborder="0" allow="autoplay" allowfullscreen></iframe>',
+#             unsafe_allow_html=True,
+#                  )
+#               else:
+#                  st.error("No video found for this movie 😢")
+#              #play(s2)
+#       lef.image(img1,width=200)
+#       with lef:
+#        st.write(s1)
+#        if st.button("▶ Play",key="re_lef"):
+#         #talk_l(s1)
+#         #play_mop(s1)
+#         play(s1)
       
-      mid.image(img2,width=200)
-      with mid:
-       st.write(s2)
-       if st.button("▶ Play",key="re_mid"):
-        #talk_m(s2)
-        #play_mop(s2)
-        play(s2)
-    else:
-     st.write("Movie does not exist")
-  else:
-   st.write("")
+#       mid.image(img2,width=200)
+#       with mid:
+#        st.write(s2)
+#        if st.button("▶ Play",key="re_mid"):
+#         #talk_m(s2)
+#         #play_mop(s2)
+#         play(s2)
+#     else:
+#      st.write("Movie does not exist")
+#   else:
+#    st.write("")
   # dom=df7[df7['original_language']=='Punjabi']
   
   # my_list = [1, 2, 3]
@@ -215,6 +215,51 @@ def show():
   #   else:
   #    st.warning("No song selected.")
   #   st.session_state.current_song_leftm = None  # or some default value
+  import requests
+
+  API_KEY = "AIzaSyDiQUIS2-y8U0un3JCiAe4tgAxhb8003Uc"  # Replace with your key
+  SEARCH_URL = "https://www.googleapis.com/youtube/v3/search"
+
+  def search_youtube_song(query, max_results=5):
+    params = {
+        "part": "snippet",
+        "q": query,
+        "type": "video",
+        "maxResults": max_results,
+        "key": API_KEY
+    }
+    response = requests.get(SEARCH_URL, params=params)
+    
+    # Check for HTTP errors
+    if response.status_code != 200:
+        st.error(f"API request failed: {response.status_code}")
+        st.write(response.text)
+        return []
+    
+    data = response.json()
+    
+    # Debug: See the full API response
+    # st.write(data)
+    
+    videos = []
+    for item in data.get("items", []):
+        video_id = item["id"]["videoId"]
+        title = item["snippet"]["title"]
+        url = f"https://www.youtube.com/watch?v={video_id}"
+        videos.append({"title": title, "url": url})
+    return videos
+
+  search_query = st.text_input("Search for a song")
+
+  if search_query:
+    results = search_youtube_song(search_query)
+    if not results:
+        st.warning("No results found. Check your API key or quota.")
+    else:
+        for video in results:
+            st.write(video["title"])
+            st.video(video["url"])
+
   import random
   if 'songs_selectedp' not in st.session_state:
     st.session_state.songs_selectedp = random.sample(df7.to_dict('records'), 9) # Pick 2 random songs
@@ -713,6 +758,7 @@ def show():
 
 
 # show()
+
 
 
 
