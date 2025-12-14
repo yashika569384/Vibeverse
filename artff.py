@@ -154,6 +154,24 @@ def show():
 #  if img is not None:
 #     image = Image.open(img)
 #     image = np.array(image) 
+ def make_downloadable(img_array, filename):
+    # Convert OpenCV / NumPy image → PIL
+    if isinstance(img_array, np.ndarray):
+        img_pil = Image.fromarray(img_array)
+    else:
+        img_pil = img_array
+
+    buf = io.BytesIO()
+    img_pil.save(buf, format="PNG")
+    byte_img = buf.getvalue()
+
+    st.download_button(
+        label="⬇️ Download Image",
+        data=byte_img,
+        file_name=filename,
+        mime="image/png"
+    )
+
  def pencil_sketch(image):
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)  # Convert to grayscale
     inverted = cv2.bitwise_not(gray)  # Invert the grayscale image
@@ -237,6 +255,7 @@ def show():
      if st.button("✏️ Pencil Sketch"):
         sketch = pencil_sketch(image)
         st.image([img, sketch], caption=["Original", "Pencil Sketch"], width=300)
+        make_downloadable(sketch, "pencil_sketch.png")
 
     with col2:
      if st.button("🎨 Cartoonize"):
@@ -245,12 +264,14 @@ def show():
             original = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             cartoon = cv2.cvtColor(cartoon_image, cv2.COLOR_BGR2RGB)
             st.image([original, cartoon], caption=["Original", "Cartoonized"], width=300)
+            make_downloadable(cartoon_rgb, "cartoon_art.png")
     with col3:
      if st.button("🖌️ Watercolor Art"):
       image_bgr = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
       wc_bgr = watercolor(image_bgr)
       wc_rgb = cv2.cvtColor(wc_bgr, cv2.COLOR_BGR2RGB)
       st.image([image, wc_rgb], caption=["Original", "Watercolor Effect"], width=300)
+      make_downloadable(cartoon_rgb, "watercolor_art.png")
     with col4:
      if st.button("💜Pastel Art"):
          pastel = cv2.bilateralFilter(image, d=9, sigmaColor=75, sigmaSpace=75)
@@ -260,4 +281,6 @@ def show():
          pastel = cv2.add(pastel, noise)
          pastel_bgr = cv2.cvtColor(pastel, cv2.COLOR_RGB2BGR)
          st.image([image, pastel_bgr], caption=["Original", "Pastel Effect"], width=300)
+         make_downloadable(cartoon_rgb, "pastel_art.png")
 # show()
+
