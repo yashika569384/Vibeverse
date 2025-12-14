@@ -264,14 +264,14 @@ def show():
             original = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             cartoon = cv2.cvtColor(cartoon_image, cv2.COLOR_BGR2RGB)
             st.image([original, cartoon], caption=["Original", "Cartoonized"], width=300)
-            make_downloadable(cartoon_rgb, "cartoon_art.png")
+            make_downloadable(cartoon, "cartoon_art.png")
     with col3:
      if st.button("🖌️ Watercolor Art"):
       image_bgr = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
       wc_bgr = watercolor(image_bgr)
       wc_rgb = cv2.cvtColor(wc_bgr, cv2.COLOR_BGR2RGB)
       st.image([image, wc_rgb], caption=["Original", "Watercolor Effect"], width=300)
-      make_downloadable(cartoon_rgb, "watercolor_art.png")
+      make_downloadable(wc_rgb, "watercolor_art.png")
     with col4:
      if st.button("💜Pastel Art"):
          pastel = cv2.bilateralFilter(image, d=9, sigmaColor=75, sigmaSpace=75)
@@ -281,6 +281,7 @@ def show():
          pastel = cv2.add(pastel, noise)
          pastel_bgr = cv2.cvtColor(pastel, cv2.COLOR_RGB2BGR)
          st.image([image, pastel_bgr], caption=["Original", "Pastel Effect"], width=300)
-         make_downloadable(cartoon_rgb, "pastel_art.png")
+         make_downloadable(pastel_bgr, "pastel_art.png")
 # show()
+
 
