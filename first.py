@@ -79,7 +79,7 @@ st.markdown("""
         margin: 10px 5px;
         cursor: pointer;
         transition: all 0.3s ease;
-        font-size: 50px; /* Set font size to 50px */
+        font-size: 100px; /* Set font size to 50px */
     }
     .custom-button:hover {
         background-color: #ff9900;
@@ -96,8 +96,8 @@ st.markdown("""
         padding: 60px 80px; /* Larger padding for bigger button */
         margin: 5px;
         transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        font-size: 100px; /* Increase font size for larger text */
-        width: 100px;
+        font-size: 50px; /* Increase font size for larger text */
+        width: 300px;
         height: 200px;
     }
     div.stButton > button:first-child:hover {
@@ -169,6 +169,7 @@ elif st.session_state.news_button_clicked:
 
     if st.button("Back", key="back_news"):
         st.session_state.news_button_clicked = False
+
 
 
 
