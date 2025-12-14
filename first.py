@@ -79,7 +79,7 @@ st.markdown("""
         margin: 10px 5px;
         cursor: pointer;
         transition: all 0.3s ease;
-        font-size: 100px; /* Set font size to 50px */
+        font-size: 50px; /* Set font size to 50px */
     }
     .custom-button:hover {
         background-color: #ff9900;
@@ -169,6 +169,7 @@ elif st.session_state.news_button_clicked:
 
     if st.button("Back", key="back_news"):
         st.session_state.news_button_clicked = False
+
 
 
 
