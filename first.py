@@ -136,7 +136,7 @@ if not any([
         if st.button("Global Feed"):
             st.session_state.news_button_clicked = True
 
-Art Section
+# Art Section
 if st.session_state.art_button_clicked:
     st.header("Art Corner")
     artff.show()  # Your art logic here
@@ -169,6 +169,7 @@ elif st.session_state.news_button_clicked:
 
     if st.button("Back", key="back_news"):
         st.session_state.news_button_clicked = False
+
 
 
 
