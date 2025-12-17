@@ -133,7 +133,7 @@ if not any([
     with col2:
         if st.button("Game spot"):
             st.session_state.game_button_clicked = True
-         if st.button("Global Feed"):
+        if st.button("Global Feed"):
             st.session_state.news_button_clicked = True
 
 Art Section
@@ -169,6 +169,7 @@ elif st.session_state.news_button_clicked:
 
     if st.button("Back", key="back_news"):
         st.session_state.news_button_clicked = False
+
 
 
 
