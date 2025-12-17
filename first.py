@@ -1,6 +1,6 @@
 import streamlit as st
-import artff
-import newsai
+#import artff
+#import newsai
 import game
 import home1
 # st.set_page_config(page_title="VibeVerse", layout="centered")
@@ -125,27 +125,27 @@ if not any([
     col1, col2 = st.columns(2)
 
     with col1:
-        if st.button("Pixel Paint"):
-            st.session_state.art_button_clicked = True
+        # if st.button("Pixel Paint"):
+        #     st.session_state.art_button_clicked = True
         if st.button("Game Spot"):
             st.session_state.game_button_clicked = True
 
     with col2:
         if st.button("Fantasy World"):
             st.session_state.entertainment_button_clicked = True
-        if st.button("Global Feed"):
-            st.session_state.news_button_clicked = True
+        # if st.button("Global Feed"):
+            # st.session_state.news_button_clicked = True
 
 # Art Section
-if st.session_state.art_button_clicked:
-    st.header("Art Corner")
-    artff.show()  # Your art logic here
+# if st.session_state.art_button_clicked:
+#     st.header("Art Corner")
+#     artff.show()  # Your art logic here
 
-    if st.button("Back", key="back_art"):
-        st.session_state.art_button_clicked = False
+#     if st.button("Back", key="back_art"):
+#         st.session_state.art_button_clicked = False
 
 # Entertainment Section
-elif st.session_state.entertainment_button_clicked:
+if st.session_state.entertainment_button_clicked:
     # st.header("Entertainment Corner")
     # option=st.sidebar.selectbox("Select options",options=['Home','Music','Movies','K-Drama'],key='home')
     home1.show()
@@ -162,13 +162,14 @@ elif st.session_state.game_button_clicked:
         st.session_state.game_button_clicked = False
 
 # News Section
-elif st.session_state.news_button_clicked:
+# elif st.session_state.news_button_clicked:
    
     
-    newsai.show()
+#     newsai.show()
 
-    if st.button("Back", key="back_news"):
-        st.session_state.news_button_clicked = False
+#     if st.button("Back", key="back_news"):
+#         st.session_state.news_button_clicked = False
+
 
 
 
