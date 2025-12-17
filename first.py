@@ -125,8 +125,8 @@ if not any([
     col1, col2 = st.columns(2)
 
     with col1:
-        if st.button("Pixel Paint"):
-            st.session_state.art_button_clicked = True
+        # if st.button("Pixel Paint"):
+        #     st.session_state.art_button_clicked = True
         if st.button("Fantasy World"):
             st.session_state.entertainment_button_clicked = True
 
@@ -137,12 +137,12 @@ if not any([
             st.session_state.news_button_clicked = True
 
 # Art Section
-if st.session_state.art_button_clicked:
-    st.header("Art Corner")
-    artff.show()  # Your art logic here
+# if st.session_state.art_button_clicked:
+#     st.header("Art Corner")
+#     artff.show()  # Your art logic here
 
-    if st.button("Back", key="back_art"):
-        st.session_state.art_button_clicked = False
+#     if st.button("Back", key="back_art"):
+#         st.session_state.art_button_clicked = False
 
 # Entertainment Section
 if st.session_state.entertainment_button_clicked:
@@ -169,6 +169,7 @@ elif st.session_state.news_button_clicked:
 
     if st.button("Back", key="back_news"):
         st.session_state.news_button_clicked = False
+
 
 
 
