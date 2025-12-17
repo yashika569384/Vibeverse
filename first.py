@@ -1,6 +1,6 @@
 import streamlit as st
-#import artff
-#import newsai
+import artff
+import newsai
 import game
 import home1
 # st.set_page_config(page_title="VibeVerse", layout="centered")
@@ -169,6 +169,7 @@ elif st.session_state.game_button_clicked:
 
 #     if st.button("Back", key="back_news"):
 #         st.session_state.news_button_clicked = False
+
 
 
 
